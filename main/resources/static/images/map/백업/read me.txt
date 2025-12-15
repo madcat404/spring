@@ -1,0 +1,3 @@
+C:\Users\user\Desktop\kjwt\src\main\resources\static\images\map
+
+이 경로에 notice_global_map.png 파일이 있으니 모바일에서 홈페이지 사업장 소개를 열람할때 아이윈으로 뜨지 않음

@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* *******************************************************
+ * filename : main_responsive.css
+ * description : 메인 레이아웃 및 컨텐츠 반응형 CSS
+ * date : 2020-11-25
+******************************************************** */
+
+/* ******************  메인 비주얼 ********************** */
+@media all and ( max-width: 1620px ){	
+	/* 메인 비주얼 :: 스크롤아이콘 */
+	.main-scroll-icon{left:0; margin-left:0; padding-left:95px}
+}
+@media all and ( max-width: 1024px ){
+	/* 공통 :: 레이아웃 */
+	#fullpage .section{height:auto !important;}
+	#fullpage .fp-section .fp-tableCell{padding-top:0; /*height:0 !important;*/height:auto !important}
+	/* 메인 비주얼 :: 이미지 */
+	.main-visual-item .main-visual-pc-img{display:none;}
+	.main-visual-item .main-visual-m-img{display:block; position:relative; padding-top:115%}
+	.main-visual-item .main-visual-m-img span{position:absolute; top:0; left:0; width:100%; height:100%; background-size:cover !important}
+	/* 메인 비주얼 :: 텍스트 */
+	.main-visual-item .main-visual-txt-con{margin-top:-12%}
+	.main-visual-item .main-visual-txt-con .visual-txt-wrap{padding-left:0}
+	/* 메인 비주얼 :: 스크롤아이콘 */
+	.main-scroll-icon{padding-left:15px; bottom:27%}
+	/* 메인 비주얼 :: Dots */
+	.main-visual-con .slick-dots-wrapper{bottom:5%}
+	.main-visual-con .slick-dots{width:calc(100% - 66px)}
+	.main-visual-con .slick-dots li{width:30.666%; margin-left:4%}
+}
+@media all and ( max-width: 800px ){	
+	/* 메인 비주얼 :: 텍스트 */
+	.main-visual-item .main-visual-txt-con .main-visual-txt1{font-size:54px; line-height:1.1}
+	.main-visual-item .main-visual-txt-con .main-visual-txt2{font-size:16px}
+	/* 메인 비주얼 :: Dots */
+	.main-visual-con .slick-dots-wrapper{bottom:4%}
+	.main-visual-con .slick-dots{width:100%; margin-right:0}
+	.main-visual-con .slick-dots li .dot-txt{display:none}
+	/* 메인 비주얼 :: pause,play */
+	.main-visual-con .slick-control-btns{display:none}
+}
+@media all and ( max-width: 480px ){	
+	/* 메인 비주얼 :: 텍스트 */
+	.main-visual-item .main-visual-txt-con .main-visual-txt1{font-size:40px}
+	.main-visual-item .main-visual-txt-con .main-visual-txt2{font-size:13px}	
+	/* 메인 비주얼 :: 스크롤아이콘 */
+	.main-scroll-icon{bottom:23%}
+	.main-scroll-icon span{font-size:11px}
+}
+
+/* ******************  메인 컨텐츠 ********************** */
+@media (max-height: 800px) and (min-width: 1025px){	
+	/* -------- 메인 컨텐츠 :: 컨텐츠1(About Us) -------- */
+	#mainContent1{padding:80px 0}
+	.main-con-01{padding-top:0}
+	/* -------- 메인 컨텐츠 :: 컨텐츠2(Semiconductor / Green Energy) -------- */
+	.main-con-02 .main-02-inner .inner-con{padding-top:0}
+	 /* -------- 메인 컨텐츠 :: 컨텐츠3(News&Notice) -------- */
+	#mainContent3{padding-bottom:80px}
+}
+
+/* -------- 메인 컨텐츠 :: 컨텐츠1(About Us) -------- */
+  @media all and (max-width:1220px){	
+	.main-con-01{padding-top:80px}
+	/* 박스 4개 */
+	.main-about-us .about-us-item .item-txt-box{top:12%; left:10%}
+	/* 투자정보 */
+	#mainContent1.on .invest-info-con{transition-delay:0.1s}
+	.invest-info-con .lf-tit .tit{margin-left:15px}
+	.invest-info-con .rt-invest .price, .invest-info-con .rt-invest .price-info, .invest-info-con .rt-invest .more-btn{margin-left:25px}
+	.invest-info-con .rt-invest .price{font-size:55px}
+	.invest-info-con .rt-invest .price-info{font-size:17px}
+
+ }
+   @media all and (max-width:1024px){	
+	#mainContent1{padding:80px 0}
+	.main-con-01{padding-top:0}
+	/* 박스 4개 */
+	.main-about-us .about-us-item .item-tit{font-size:18px}
+	.main-about-us .about-us-item .item-num .num, .main-about-us .about-us-item .item-num .plus{font-size:45px}
+	.main-about-us .about-us-item .item-num .unit{font-size:12px}
+	/* 투자정보 */
+	.invest-info-con{text-align:center}
+	.invest-info-con .lf-tit{float:none; width:100%}
+	.invest-info-con .rt-invest{float:none}
+	.invest-info-con .rt-invest .price{display:block; margin:18px 0;}
+	.invest-info-con .rt-invest .more-btn{display:block; margin:25px 0 0}
+   }
+ @media all and (max-width:800px){	
+	#mainContent1{padding:40px 0}
+	.main-tit-box{margin-bottom:15px;}
+	.main-tit-box .main-tit{font-size:40px;}
+	/* 박스 4개 */
+	.main-about-us .about-us-item {width:50%}
+	.main-about-us .about-us-item .item-txt-box{top:10%; left:9%}
+	.main-about-us .about-us-item .item-tit{font-size:17px}
+	.main-about-us .about-us-item .item-num .num, .main-about-us .about-us-item .item-num .plus{font-size:37px}
+	.main-about-us .about-us-item .item-num .unit{font-size:12px}
+	/* 투자정보 */
+	.invest-info-con{margin-top:40px}
+	.invest-info-con .lf-tit .icon img{height:80px}
+	.invest-info-con .lf-tit .tit{text-align:left; margin-left:15px}
+	.invest-info-con .lf-tit .tit strong{font-size:23px}
+	.invest-info-con .lf-tit .tit em{font-size:12px}
+	
+	.invest-info-con .rt-invest{float:none}
+	.invest-info-con .rt-invest .price{margin:15px 0; font-size:40px}
+	.invest-info-con .rt-invest .price-info{margin:0 20px 0 0; font-size:15px}
+	.invest-info-con .rt-invest .price-info.price-info-02{margin:0}
+	.invest-info-con .rt-invest .price-info dt{padding-right:5px}
+	.invest-info-con .rt-invest .price-info dd span:first-child{padding-right:15px}
+	.invest-info-con .rt-invest .price-info dd span:first-child:after{right:5px; height:11px}
+	.invest-info-con .rt-invest .more-btn{margin:15px 0 0}
+}
+
+/* -------- 메인 컨텐츠 :: 컨텐츠2(Semiconductor / Green Energy) -------- */
+ @media all and (max-width:1220px){	
+	.main-con-02 .main-02-inner .inner-con{padding-top:80px}
+	.main-con-02 .main-02-inner .inner-con .txt-en{font-size:65px}
+	.main-con-02 > div .main-02-inner:before{transition-delay:0.1s}
+ }
+ @media all and (max-width:1024px){	
+	.main-con-02 .main-02-inner .inner-con{padding-top:0}
+	.main-con-02 > div{height:0; padding-top:60%}
+	.main-con-02 .main-02-inner .inner-con .txt-kr{font-size:16px;}
+	.main-con-02 .main-02-inner .inner-con .txt-en{font-size:52px; margin-top:15px}
+	.main-con-02 .main-02-inner .inner-con .txt-explain{margin-top:15px; font-size:16px}
+}
+ @media all and (max-width:800px){	
+	.main-con-02 > div{float:none; width:100%; padding-top:95%;}
+	.main-con-02 > .main-02-rt{margin-top:-1px}
+	.main-con-02 > .main-02-lf .main-02-inner:after{background:url("/images/unitest/carseat.jpg") no-repeat 50% 0;}
+	.main-con-02 > .main-02-rt .main-02-inner:after{background:url("/images/unitest/eco.jpg") no-repeat 50% 0;}
+	.main-con-02 > .main-02-lf2 .main-02-inner:after{background:url("/images/unitest/ecu.jpg") no-repeat 50% 0;}
+	.main-con-02 > .main-02-rt2 .main-02-inner:after{background:url("/images/unitest/handle.jpg") no-repeat 50% 0;}
+	.main-con-02 > .main-02-rt3 .main-02-inner:after{background:url("/images/unitest/carseat.jpg") no-repeat 50% 0;}
+	.main-con-02 .main-02-inner .inner-con .txt-en,
+	.main-con-02 .main-02-inner .inner-con .txt-explain{margin-top:0}
+ }
+ @media all and (max-width:480px){	
+	.main-con-02 .main-02-inner .inner-con .txt-en{font-size:40px}
+	.main-con-02 .main-02-inner .inner-con .txt-kr,
+	.main-con-02 .main-02-inner .inner-con .txt-explain{font-size:14px}
+ }
+
+
+ /* -------- 메인 컨텐츠 :: 컨텐츠3(News&Notice) -------- */
+ @media all and (max-width:1220px){		
+	.main-con3-wrap{margin-top:80px; margin-left:12%; transform ease 1.2s 0.1s, opacity ease 1.2s 0.2s}
+ }
+@media all and (max-width:1024px){		
+	#mainContent3{padding:80px 0 120px 15px}
+	.main-con3-wrap{margin:0; min-height:auto}
+	.news-slide-wrap .slide-arrow:after{font-size:30px}
+	.news-slide-wrap .slide-arrow em{font-size:12px}
+	.news-slide-wrap .swiper-button-next{margin-top:70px}
+	.news-slide-wrap .swiper-button-next em{top:-9px}
+	.news-slide-wrap .swiper-button-prev em{bottom:-9px}
+}
+@media all and (max-width:800px){		
+	#mainContent3{padding:50px 0 60px 15px}
+	.main-con3-tit{font-size:27px; top:78px; left:-82px}
+	.news-slide-wrap{margin-left:50px}
+	.news-notice-slide li{width:68% !important; margin-bottom:30px}
+	.news-notice-slide li .new-txt-con .news-tit{font-size:22px}
+	.news-notice-slide li .new-txt-con .news-txt{font-size:14px; -webkit-line-clamp:3; height:5.58em; margin-top:10px}
+	.news-notice-slide li .news-date{margin-top:30px}
+	.news-slide-wrap .slide-arrow{top:225px; left:-3px}
+	.news-slide-wrap .slide-arrow:after{font-size:25px}
+	.news-slide-wrap .slide-arrow em{font-size:11px}
+	.news-slide-wrap .swiper-button-next{margin-top:50px}
+	.news-slide-wrap .swiper-button-next em{top:-5px}
+	.news-slide-wrap .swiper-button-prev em{bottom:-5px}
+}
+
+/* ******************  메인 오른쪽 퀵메뉴 ********************** */
+@media all and ( max-width: 1440px ){
+	#rightBar{right:-56px;}
+	#rightBar.fixed{visibility:hidden;opacity:0;filter:Alpha(opacity=0);}
+}
+/* ******************  메인 오른쪽 퀵메뉴 (Fullpage) ********************** */
+@media all and (max-width:1730px){	
+	#fp-nav{left:30px}
+}
+@media all and (max-width:1220px){
+	#fp-nav{padding-top:0}
+}
+@media all and (max-width:1024px){
+	#fp-nav{display:none;}
+}

@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css?family=Play&display=swap');
+
+/* -------- 주가정보 상단 추가 (171211 미화) -------- */
+.stock-top-content{overflow:hidden; margin-bottom:20px; font-family:'Play', 'Noto Sans KR', "나눔고딕", NanumGothic, "Nanum Gothic","돋움", Dotum, Arial, sans-serif;}
+.stock-top-content .pr-down{color:#19489e}
+.stock-top-content .pr-up{color:#c70e0e}
+/* 상단 주가정보 :: 새로고침 */
+.reset-btns{text-align:right; margin-bottom:15px;}
+.reset-btns a{display:inline-block; width:140px; height:34px; line-height:34px; color:#fff; font-size:14px; text-align:center; background-color:#000; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
+.reset-btns a i{line-height:34px; vertical-align:middle; margin-top:-2px; font-size:20px;}
+/* 상단 주가정보 :: 왼쪽정보 */
+.stock-top-left-con{float:left; width:48%; border:1px solid #d9d9d9; border-top:2px solid #000;}
+.stock-title-con{overflow:hidden; height:30px; padding:23px 20px; background-color:#f1f1f1;}
+.stock-title-con > h3{float:left; color:#000; font-size:22px; font-weight:400;}
+.stock-title-con > h3 b{color:#000; font-weight:400;}
+.stock-title-con > p{float:right; color:#242424; font-size:14px; line-height:30px;}
+.stock-cur-price-con{height:55px; padding:37px 0; border-top:1px solid #d9d9d9; border-bottom:1px solid #d9d9d9; background-color:#fff; text-align:center;}
+.stock-cur-price-con .stock-cur-icon{display:inline-block; vertical-align:middle; padding:8px 15px; background-color:#333; color:#fff; font-size:18px; font-weight:400; margin-right:50px; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
+.stock-cur-price-con .stock-cur-price{display:inline-block; vertical-align:middle; color:#171717; font-size:60px; font-weight:700; letter-spacing:-0.75px;}
+.stock-cur-price-con .stock-cur-price.up{color:#c70e0e;}
+.stock-cur-price-con .stock-cur-price.down{color:#19489e;}
+.stock-cur-price-con .stock-cur-price.normal{color:#171717}
+.stock-prev-price-con{overflow:hidden; background-color:#f1f1f1;}
+.stock-prev-price-con > dl{float:left; width:50%; height:22px; padding:29px 0; text-align:center;}
+.stock-prev-price-con > dl:first-child{width:49%; border-right:1px solid #d9d9d9; }
+.stock-prev-price-con > dl dt,
+.stock-prev-price-con > dl dd{
+	display:inline-block; width:45%; vertical-align:middle;
+}
+.stock-prev-price-con > dl dt{color:#171717; font-size:19px; letter-spacing:-0.25px;}
+.stock-prev-price-con > dl dd{font-size:22px; letter-spacing:-0.25px;;}
+.stock-prev-price-con > dl dd b{font-weight:400; color:#171717;}
+/* 상단 주가정보 :: 오른쪽정보 */
+.stock-top-right-con{float:right; width:48%; border:1px solid #d9d9d9; border-top:2px solid #000; background-color:#fff;}
+.stock-top-right-con table{width:100%; }
+.stock-top-tbl-01{background-color:#f6f6f6}
+.stock-top-tbl-02{background-color:#fff;}
+.stock-top-right-con th, .stock-top-right-con td{height:16px; padding:20px 0; border-left:1px solid #d9d9d9; border-top:1px solid #d9d9d9}
+.stock-top-right-con th:first-child, .stock-top-right-con td:first-child{border-left:0;}
+.stock-top-right-con table dl{overflow:hidden; padding:0 15px}
+.stock-top-right-con table dt, .stock-top-right-con table dd{color:#171717; font-size:16px; letter-spacing:-0.5px; }
+.stock-top-right-con table dt{float:left; width:50%;}
+.stock-top-right-con table dd{float:right; width:50%; text-align:right; font-weight:400;}
+.stock-top-right-con table dd b{font-weight:600;}
+
+@media all and (max-width:1220px){
+	/* 상단 주가정보 :: 왼쪽정보 */
+	.stock-title-con > h3{font-size:22px; padding:4px 0;}
+	.stock-title-con > p{font-size:13px;}
+	.stock-cur-price-con .stock-cur-icon{font-size:15px;}
+	.stock-cur-price-con .stock-cur-price{font-size:40px;}
+	.stock-prev-price-con > dl dt{font-size:15px;}
+	.stock-prev-price-con > dl dd{font-size:19px;}
+	/* 상단 주가정보 :: 오른쪽정보 */
+	.stock-top-right-con table dl{padding:0 6px;}
+	.stock-top-right-con table dt, .stock-top-right-con table dd{font-size:14px;}
+}
+@media all and (max-width:768px){
+	.reset-btns a{width:100px; height:30px; line-height:30px; font-size:12px;}
+	.stock-top-left-con, .stock-top-right-con{float:none; width:auto; }
+	.stock-top-right-con{height: auto;}
+	/* 상단 주가정보 :: 왼쪽정보 */
+	.stock-top-left-con{margin-bottom:15px;}
+	.stock-title-con{height:auto; padding:10px;}
+	.stock-title-con > h3{}
+	.stock-cur-price-con{height:auto; padding:25px 0;}
+	.stock-cur-price-con .stock-cur-icon{font-size:12px;}
+	.stock-cur-price-con .stock-cur-price{font-size:30px;}
+	.stock-prev-price-con > dl{height:auto; padding:15px 0;}
+	.stock-prev-price-con > dl dt{font-size:13px;}
+	.stock-prev-price-con > dl dd{font-size:15px;}
+	/* 상단 주가정보 :: 오른쪽정보 */
+	.stock-top-right-con th, .stock-top-right-con td{height:auto; padding:10px 0;}
+	.stock-top-right-con table dl{padding:0 4px;}
+	.stock-top-right-con table dt, .stock-top-right-con table dd{font-size:12px;}
+}
+
+.stock-graph-content{border:10px solid #f1f1f1; padding:10px 10px; margin-bottom:20px;}
+
+@media all and (max-width:1240px){
+	.stock-graph-content{display:none;}
+}
+
+
+/* ---------------- 기존 투자정보 css (민주) -------------------- */ 
+/* 투자정보 :: 주가현황 */
+section.tbl{color:#444; overflow:hidden;}
+section.tbl > article{margin-bottom:70px;}
+.stockTbl .cr{color:#e52a2a;font-weight:600}
+.stockTbl .cb{color:#5164c8;font-weight:600}
+.bob{border-bottom:1px solid #ddd;}
+section.tbl .tbl-tit{position: relative; font-size:28px; font-weight:600; color:#222; letter-spacing:-0.5px; margin-bottom:15px;}
+section.tbl .tbl-tit span{position: absolute; bottom: 0px; right: 0; display: inline-block; font-size: 14px; color:#a2a2a2; font-weight:400}
+section.tbl .tbl-main-tit{float:left; font-size:36px; font-weight:600; color:#444; letter-spacing:-1px; margin-bottom:25px; padding-top:25px; font-weight:500}
+.price-box{float:right; overflow:hidden; font-weight:600; padding-top:30px; padding-bottom:25px}
+.price-box > p{float:left; font-size:16px; line-height:22px; font-weight:400}
+.price-box > p:first-child{margin-right:35px;}
+.price-box > p:first-child > strong{font-size:38px; line-height:22px; font-weight:600; vertical-align:bottom;}
+.price-box > p:first-child > span{font-size:20px; line-height:22px; vertical-align:bottom; padding-right:10px; font-weight:500}
+.stockTbl{clear:both; width:100%; color:#333;}
+.stockTbl th{font-size:16px; height:55px; vertical-align:middle; background-color:#fafafa; border:0px; border-top:2px solid #000; border-bottom:1px solid #afafaf; text-align:center; font-weight:500;  color:#333; }
+.stockTbl td{font-size:16px; height:45px; color:#333; vertical-align:middle; text-align:center; border-left:1px solid #ededed; word-break:keep-all}
+.stockTbl td:first-child{border-left:0}
+.table02 tr td, .table03 tr td, .table04 tr td, .table05 tr td{border-bottom:1px solid #ededed;}
+.table04 tr.subject td{border-bottom:1px solid #999; border-left:1px solid #ededed;}
+.table04 tr.subject td:first-child{border-left:0}
+/* 투자정보 :: 공시정보 */	
+.stock02-table tr td{border-bottom:1px solid #ddd;}
+/* 투자정보 :: 재무정보 */
+.stock03-table th{border-bottom:1px solid #afafaf; border-top:2px solid #000;}
+.stock03-table td{border-left: 1px solid #ededed; border-bottom: 1px solid #ededed; border-top: 1px solid #ededed;}
+.stock03-table td.bg:first-child{border-left:1px solid #afafaf}
+
+@media all and  (max-width: 1220px){
+	.stockTbl th{font-size: 15px;}
+	.stockTbl td{font-size: 14px;}
+}
+@media all and ( max-width: 800px ){
+	.stockTbl th{height: 45px; font-size:14px;}
+	.stockTbl td{font-size:12px;}
+	section.tbl .tbl-tit{font-size:19px}
+	section.tbl .tbl-tit span{font-size:12px}
+}
+
+
+/* -------- 스크롤 가이드 추가 (MH) -------- */
+.stockTbl-scrollbar-cover{display:none;}
+
+@media all and ( max-width: 800px ){
+	.stockTbl-wrapper{position:relative; width:100%; overflow-x:auto;}
+	.stockTbl-wrapper {width:600px}
+	.stockTbl-scrollbar-cover{display:block; position:absolute; top:0px; left:0px; right:0px; bottom:0px; background-color:rgba(0,0,0,0.5)}
+	.stockTbl-scrollbar-cover .scroll-cover-txt{position:absolute; top:50%; margin-top: -27.5px; left:0; width:100%; text-align:center; color:#fff; font-weight: 300; font-size:15px;}
+	.stockTbl-scrollbar-cover .scroll-cover-txt img{display: block; display:block; margin: 0 auto 10px; }
+}

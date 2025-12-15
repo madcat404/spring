@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy:MM:dd HH:mm:ss} %-5level --- [%thread] %logger{35} : %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="INFO" />
+    <logger name="org.thymeleaf" level="INFO"/>
+    <logger name="org.apache" level="ERROR" />
+    <logger name="com.taerinsoft.product.web.kwangjinwintec.site" level="DEBUG" />
+    <logger name="org.springframework.security.web.authentication" level="OFF"/>
+</configuration>

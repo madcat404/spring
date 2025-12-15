@@ -1,0 +1,595 @@
+@charset "utf-8";
+/* *******************************************************
+ * filename : content_responsive.css
+ * description : 서브페이지 컨텐츠 반응형 CSS
+ * date : 2020-11-25
+******************************************************** */
+
+
+/* ******************  서브공통 ********************** */
+/* -------- 공통 스크롤바  -------- */
+@media all and (max-width:1220px){
+	.custom-scrollbar-wrapper .scroll-object{max-width:100%;}
+}
+@media all and (max-width:800px){
+	.custom-scrollbar-wrapper{position:relative;/*margin-right:-15px;*/ cursor:move}
+	.custom-scrollbar-wrapper .scroll-object{max-width:none; width:800px; }
+	.custom-scrollbar-cover{display:block; position:absolute; top:0px; left:0px; right:0px; bottom:0px; background-color:rgba(0,0,0,0.5)}
+	.custom-scrollbar-cover .scroll-cover-txt{position:absolute; top:50%; transform:translateY(-50%); left:0; width:100%; text-align:center; color:#fff; font-size:300; font-size:15px;}
+	.custom-scrollbar-cover .scroll-cover-txt i{font-size:30px; display:block; margin-bottom:20px; }
+}
+
+/* -------- 공통 :: 탭 -------- */
+@media all and (max-width:1220px){
+	.sub-tab-list-style .area{padding:0}
+}
+@media all and (max-width:1024px){
+	/* Tab Fixed Move*/
+	.sub-tab-list-style.top-fixed{top:80px;}
+}
+@media all and ( max-width: 800px ){
+	/* Tab 공통 스타일 */
+	.sub-tab-wrapper-style,
+	.sub-tab-list-style.top-fixed,
+	.sub-tab-list-style ul li a{/*height:40px;*/padding-bottom:10px }
+	.sub-tab-list-style ul li a em{font-size:14px}
+	.sub-tab-list-style ul.cm-style li a{padding:0 20px 10px}
+	.cm-style-tab-content,
+	.cm-style-tab-content-02{margin-top:30px}
+	/* Tab Fixed Move*/
+	/* Mobile Tab Drop Menu */
+	.sub-drop-menu-style{position:relative;}
+	.sub-drop-open-btn-style{display:block; position:relative; padding:0 15px; height:40px; line-height:40px; font-size:15px; background-color:#333; box-sizing:border-box;}
+	.sub-drop-open-btn-style span{color:#fff; }
+	.sub-drop-open-btn-style .arrow{color:#fff; position:absolute; top:50%; right:15px; margin-top:-7px}
+	.sub-drop-open-btn-style.open .arrow{transform:rotate(180deg)}
+	.sub-drop-menu-style ul{display:none; margin:0; height:auto; position:absolute; top:100%; left:0px; right:0px; background-color:#fff; border:1px solid #ddd; border-top:0; z-index:11; box-sizing:border-box;}
+	.sub-drop-menu-style ul li{position:static; display:block; float:none; border:0; border-top:1px solid #eee; width:auto; background-color:transparent}
+	.sub-drop-menu-style ul li:first-child{border-top:0; border-left:0}
+	.sub-drop-menu-style ul li a{display:block; width:auto; height:auto; padding:10px 15px; border:0;}
+	.sub-drop-menu-style ul li a em{font-size:13px;}
+	.sub-drop-menu-style ul li.selected a{background-color:transparent;}
+	.sub-drop-menu-style ul li.selected a em{color:#f57f20; font-weight:600; }
+}
+@media all and (max-width:480px){
+	/* Tab Fixed Move*/	
+	.sub-tab-list-style.top-fixed{top:60px;}
+	/* Tab 공통 스타일 */
+	.sub-tab-list-style ul.cm-style li{width:33.333%}
+	.sub-tab-list-style ul.cm-style li a{padding:0 0 10px}
+	.sub-tab-list-style ul li a em{font-size:12px}
+	.sub-tab-list-style ul.tab-sm-style{max-width:none;}
+
+}
+
+/* ******************  Company ********************** */
+/* ---------------- Company :: CEO 인사말 ---------------- */
+/*
+@media all and (max-width:800px){
+	.greeting-top-banner .banner-inner{padding:20px 20px 25px}
+	.greeting-top-banner .banner-inner .en-tit{font-size:12px; margin-bottom:15px}
+	.greeting-top-banner .banner-inner .banner-txt{font-size:20px; }
+	.greeting-bt-txt{padding:10px 20px 0}
+	.greeting-bt-txt .greeting-txt{padding-bottom:25px}
+	.greeting-bt-txt .greeting-txt span{font-size:13px; margin-top:15px}
+	.greeting-bt-txt .ceo-sign{margin-top:20px}
+	.greeting-bt-txt .ceo-sign span{margin-left:10px}
+	.greeting-bt-txt .ceo-sign .ceo-position{font-size:13px}
+	.greeting-bt-txt .ceo-sign .ceo-name{font-size:20px}
+	.greeting-bt-txt .ceo-sign .sign-img{width:80px}
+}
+@media all and (max-width:480px){		
+	.greeting-top-banner{background-position:71% 0 !important}
+	.greeting-top-banner .banner-inner .banner-txt{font-size:15px; display:block; padding-right:19% }
+	.greeting-top-banner .banner-inner .banner-txt br{display:none}
+	.greeting-bt-txt{padding:10px 5px 0}
+}*/
+
+/* 210120 :: 수정 */
+@media all and (max-width:800px){		
+	.greeting-inner{padding-top:35px}
+	.greeting-inner .greeting-img{float:none; width:100%; text-align:center; max-width:440px; margin:0 auto}
+	.greeting-inner .greeting-img .ceo-sign{text-align:right}
+	.greeting-inner .greeting-img .ceo-sign .ceo-name-con{padding-right:15px; margin-left:20px}
+	.greeting-inner .greeting-img .ceo-sign .ceo-name-con .ceo-position{font-size:13px}
+	.greeting-inner .greeting-img .ceo-sign .ceo-name-con .ceo-name{font-size:20px; margin-top:10px}
+	.greeting-inner .greeting-img .ceo-sign .sign-img img{height:45px}
+	.greeting-inner .greeting-txt{float:none; width:100%; padding:0 0 50px}
+	.greeting-inner .greeting-txt .txt01{font-size:20px}
+	.greeting-inner .greeting-txt .txt02 span{font-size:13px; margin-top:20px}
+}	
+
+/* ---------------- Company :: CI 소개 ---------------- */
+@media all and (max-width:1024px){	
+	/* 레이아웃 */
+	.ci-sec .ci-lf{margin-bottom:30px}
+	.ci-sec .ci-lf,.ci-sec .ci-rt{float:none; width:100%}
+}
+@media all and (max-width:800px){	
+	/* 레이아웃 */
+	.ci-sec:first-child{margin-bottom:70px}
+	.ci-sec .ci-lf{margin-bottom:15px}
+	.ci-sec .ci-lf strong{font-size:23px}
+	/* Standard Form */
+	.ci-logo{padding:45px 30px}
+	.ci-logo .ci-logo-img img{height:60px}
+	.ci-explain-txt{font-size:13px; margin:15px 0}
+	.ci-down-btn{width:160px; height:45px; line-height:45px; font-size:14px;}
+	.ci-down-btn .icon{padding-left:20px}
+	/* Main Color */
+	.ci-color-list li{height:45px;}
+	.ci-color-list li span{font-size:14px}
+	.ci-font-info{font-size:14px; margin-top:10px}
+}
+@media all and (max-width:480px){	
+	/* Main Color */
+	.ci-color-list{margin:0 }
+	.ci-color-list li{width:100%; float:none; margin:0 0 5px}
+}
+
+
+/* ---------------- Company :: 유니테스트안내 ---------------- */
+@media all and (max-width:1024px){		
+	/* 유니테스트안내 :: 해외 */
+	.nation-circle{transform:scale(0.8)}
+}
+@media all and (max-width:960px){		
+	/* 유니테스트안내 :: 해외 */
+	.global-map-con{display:none}
+	.global-map-con-m{display:block; position:relative; display:block; padding-top:50%; width:calc(100% + 30px); left:-15px}
+	.global-map-con-m .global-img{position:absolute; top:0; left:0; width:100%; height:100%; background:url("/images/map/notice_global_map.png") no-repeat 30% 0; background-size:cover}
+}
+@media all and (max-width:800px){		
+	/* 유니테스트안내 :: 국내 */
+	.notice-internal-con{margin-top:50px}
+
+	/* 유니테스트안내 :: 해외 */
+	.global-map-con .area-big{padding:0}
+	.global-map-con-m{padding-top:60%}
+	.global-store-list{display:block; flex-wrap:inherit; margin:0}
+	.global-store-list li{width:100%; margin:0 0 10px}
+	.global-store-list li .inner{padding:25px}
+	.global-store-list li .global-nation{height:auto; margin-bottom:15px}
+	.global-store-list li .global-nation .global-nation-tit .nation-tit{font-size:16px; }
+	.global-store-list li .global-nation .global-nation-tit .nation-tit em{font-size:13px}
+	.global-store-list li .global-store-info .info-sec{margin-top:15px; font-size:13px}
+	.global-store-list li .global-store-info .info-sec dd{margin-top:5px}
+
+	/* 유니테스트안내 :: 자회사 */
+	.notice-subsidiary-con{margin-top:35px}
+	.subsidiary-list{display:block; flex-wrap:inherit; margin:0}
+	.subsidiary-list li{width:100%; margin:0 0 10px}
+	.subsidiary-list li .subsidiary-inner{padding:20px}
+	.subsidiary-list li .subsidiary-tit{padding-bottom:15px}
+	.subsidiary-list li .subsidiary-tit .tit{font-size:16px; width:calc(100% - 120px)}
+	.subsidiary-list li .subsidiary-tit .logo{width:120px}
+	.subsidiary-list li .subsidiary-tit .logo img{max-height:27px}
+	.subsidiary-list li .subsidiary-info .info-txt{font-size:13px}
+	.subsidiary-list li .subsidiary-info .info-txt strong{width:85px}
+	.subsidiary-list li .subsidiary-info .info-txt span{width:calc(100% - 85px)}
+}
+
+
+/* ---------------- Company :: 회사 연혁 ---------------- */
+@media all and (max-width:1220px){	
+	/* 탭스타일 */
+	.history-tab-syle .area{padding:0}
+	.history-tab-syle.top-fixed{top:80px}
+	/* 연혁 :: 왼쪽 슬로건 */
+	.history-slogan.fixed{top:210px; width:calc(43.8% - 13px)}
+    .history-slogan.fixed.stop{width:43.8%}
+}
+@media all and (max-width:800px){		
+	/* 탭스타일 */
+	.history-tab-syle ul > li a{height:45px}
+	.history-tab-syle ul > li a em{font-size:14px;}
+	.history-tab-syle.top-fixed{height:45px}
+	.history-fixed-tab{height:45px; padding-bottom:0}
+	.company-history-year em{font-size:17px}
+	/* 연혁 */
+	.history-content-wrap{padding-bottom:50px}
+	.company-history{padding-top:50px}
+	/* 연혁 :: 왼쪽 슬로건 */
+	.history-slogan{position:relative !important; top:0 !important; width:100% !important; margin-bottom:30px}
+	.history-slogan .small-txt{font-size:13px; margin-top:20px}
+	.history-slogan .big-txt{font-size:30px; margin-top:10px}
+	.history-slogan img{max-width:none; width:100%}
+	/* 연혁 :: 오른쪽 내용 */
+	.history-detail-con{width:100%}
+}
+@media all and (max-width:480px){		
+	/* 탭스타일 */
+	.history-tab-syle.top-fixed{top:60px}
+	.history-tab-syle ul > li a em br{display:block}
+	/* 연혁 :: 왼쪽 슬로건 */
+	.history-slogan.fixed{top:135px}
+}
+
+/* ---------------- Company :: 오시는길 ---------------- */
+@media all and (max-width:800px){		
+	.location-sec{margin-bottom:70px}
+	.location-sec .lf-con{float:none; width:100%; padding:0 0 30px}
+	.location-sec .lf-con .location-tit{font-size:22px; margin-bottom:15px}
+	.location-sec .lf-con .location-info li .inner{padding:15px}
+	.location-sec .lf-con .location-info li .inner .info-tit{font-size:13px; margin-bottom:5px}
+	.location-sec .lf-con .location-info li .inner .info-txt{font-size:13px}
+	.location-sec .lf-con .kakao-map-btn{margin-top:15px; width:170px; height:40px; line-height:40px; font-size:13px}
+	.location-sec .lf-con .kakao-map-btn .icon{margin-left:15px}
+	.location-sec .rt-con{float:none; width:100%; max-width:640px; margin:0 auto}
+}
+
+
+
+/* ******************  Semiconductor ********************** */
+/* ---------------- 공통으로 쓰이는 폼 ---------------- */
+@media all and (max-width:960px){		
+	.cm-detail-con .cm-detail-lf{width:320px}
+	.cm-detail-con .cm-detail-rt{width:calc(100% - 320px)}
+}
+@media all and (max-width:800px){	
+	.cm-detail-con > div{display:block; margin:0}
+	.cm-detail-con .cm-detail-lf{width:100%; max-width:409px; margin:0 auto}
+	.cm-detail-con .cm-detail-rt{width:100%; padding:20px 0 0; text-align:center}
+	.cm-detail-con .cm-detail-rt .detail-tit{font-size:23px; }
+	.cm-detail-con .cm-detail-rt .detail-txt{font-size:13px; margin:10px 0 35px}
+	.cm-detail-con .cm-detail-rt .detail-tbl tr th, .cm-detail-con .cm-detail-rt .detail-tbl tr td{font-size:13px}
+	.cm-detail-con .cm-detail-rt .detail-tbl tr th{padding:12px 5px; width:110px}
+	.cm-detail-con .cm-detail-rt .detail-tbl tr td{padding:12px 0 12px 20px}
+}
+
+
+/* ******************  Green Energy ********************** */
+/* 공통스타일 컨텐츠 */
+@media all and (max-width:800px){		
+	.solar-energy-con{margin-top:25px}
+	.solar-sec{margin-bottom:30px}
+	/* 공통스타일 :: 상단배너 */
+	.solar-banner{display:block; min-height:auto}
+	.solar-banner > div{display:block; width:100%}
+	.solar-banner .banner-lf{padding:10% 0}
+	.solar-banner .banner-rt{padding-top:33%}
+	.solar-banner .banner-lf .banner-txt{padding:0 25px }
+	.solar-banner .banner-lf .banner-txt .small-txt{font-size:13px}
+	.solar-banner .banner-lf .banner-txt .big-txt{font-size:26px}
+	.solar-banner .banner-lf .banner-txt .big-txt.sm{font-size:26px}
+
+	/* 공통스타일 :: 표 */
+	.solar-sec-tit{font-size:16px; padding-left:18px; margin-bottom:15px}
+	.solar-sec-tit:before{width:13px; height:13px; border:3px solid #0072bc; top:2px }
+	.solar-cm-tbl .solar-tbl tr th{font-size:14px; padding:20px 10px}
+	.solar-cm-tbl .solar-tbl tr th em{font-size:13px}
+	.solar-cm-tbl .solar-tbl tr td{padding:25px}
+	.solar-cm-tbl .solar-tbl tr td p{font-size:13px; margin-bottom:15px}
+	.solar-cm-tbl .solar-tbl tr td p.dot-txt span:before{top:9px; left:-10px}
+}
+
+/* ---------------- Green Energy :: 태양광사업 ---------------- */
+/* ------ 태양광사업 :: 태양광이란? ----- */
+/* 태양광 에너지의 장단점 */
+@media all and (max-width:1024px){		
+	.solar-advantage .advantage-box dd{height:165px}
+}
+@media all and (max-width:960px){	
+	.solar-advantage .center-circle{position:relative;}
+	.solar-advantage .center-circle:before, .solar-advantage .center-circle:after{display:none}
+	.solar-advantage .advantage-box-wrap{margin:15px -1% 0}
+	.solar-advantage .advantage-box{box-sizing:border-box; width:48%; margin:0 1%}
+}
+@media all and (max-width:800px){		
+	.solar-advantage .center-circle{font-size:17px; width:170px; height:170px;}
+	.solar-advantage .advantage-box-wrap{display:flex; flex-wrap:wrap;}
+	.solar-advantage .advantage-box{background-color:#f5f5f5}
+	.solar-advantage .advantage-box dt{font-size:14px; padding:10px 0}
+	.solar-advantage .advantage-box dd{padding:5%; height:auto}
+	.solar-advantage .advantage-box dd p{font-size:13px; padding-left:17px}
+}
+
+
+/* ----- 태양광사업 :: 태양광발전소 ----- */
+@media all and (max-width:800px){	
+	/* 태양광발전소 */
+	.top-border-con{padding-top:15px}
+	.gray-triangle{font-size:13px; padding-left:16px}
+	.gray-triangle.has-explain:before{top:4px}
+	.gray-triangle .explain-box{padding:5px 10px; border-radius:7px}
+	.gray-triangle .explain-box em:before{top:7px}
+	.power-plant-01 .gray-txt-box{margin-top:15px; padding:15px}
+	.power-plant-01 .gray-txt-box .txt-wrap{font-size:13px}
+	.power-plant-01 .gray-txt-box .txt-wrap .tit{float:none; width:100%; padding:0 0 5px 11px}
+	.power-plant-01 .gray-txt-box .txt-wrap .tit:before{top:7px}
+	.power-plant-01 .gray-txt-box .txt-wrap .txt{float:none; width:100%; padding:0}
+	.power-plant-01 .gray-txt-box .txt-wrap .txt:before{display:none}
+	.power-plant-01 .box-img{padding:30px 15px}
+	/* 신재생에너지 공급의무화제도 */
+	.solar-sec-tit .blue-sm-txt{font-size:15px; padding-left:8px}
+	.power-plant-02 .txt-wrap p{margin-bottom:10px}
+	.power-plant-02 .box-img.box-img-01{padding:30px 15px 20px; margin-top:15px}
+	.power-plant-02 .partners-list{padding:20px 4% 10px; margin-bottom:15px}
+	.power-plant-02 .partners-list span{font-size:12px; padding:0 10px 10px}
+	.power-plant-02 .partners-list span.no-border:after{display:inline-block}
+	.power-plant-02 .partners-list span:first-child:after{display:none}
+	/* 신재생에너지 공급의무화제도 :: 연도별 공급의무량 */
+	.power-plant-02 .box-img.box-img-02{padding:30px 15px 20px; margin:15px 0 30px}
+	.power-plant-02 .percentage-tbl-con{padding-top:20px; margin-top:30px}
+	.power-plant-02 .percentage-tbl-con .tit{font-size:13px; padding-left:11px}
+	.power-plant-02 .percentage-tbl-con .percentage-tbl{width:800px}
+	.power-plant-02 .percentage-tbl-con .percentage-tbl tr th, .power-plant-02 .percentage-tbl-con .percentage-tbl tr td{font-size:12px; padding:15px 0}
+	/* 신재생에너지 공급의무화제도 :: 관계구도 */
+	.solar-triangle-tit{font-size:17px; margin-bottom:15px; padding-left:17px}
+	.power-plant-02 .box-img.box-img-03{padding:30px 15px }
+}
+
+
+/* ----- 태양광사업 :: EPC ----- */
+@media all and (max-width:800px){	
+	/* 엔지니어링 및 시공 */
+	.solar-epc-01 .box-img{padding:25px 15px; margin-top:20px}
+	/* 시공관리 조직도 */
+	.solar-epc-02 .box-img{padding:20px 15px 30px; margin-bottom:45px}
+}
+
+/* ----- 태양광사업 :: 유지관리 ----- */
+@media all and (max-width:800px){	
+	/* 유지보수 기본방향 */
+	.solar-qnm-box{margin-top:20px; padding:35px 20px 30px}
+	.solar-qnm-box .qnm-box-tit span{font-size:16px}
+	.solar-qnm-box .qnm-box-tit strong{font-size:25px;}
+	.solar-qnm-box .qnm-box-list{margin:20px -0.8% 0;}
+	.solar-qnm-box .qnm-box-list li{padding:25px 15px}
+	.solar-qnm-box .qnm-box-list li .icon{height:70px}
+	.solar-qnm-box .qnm-box-list li .tit{font-size:14px; margin-top:15px}
+	.solar-qnm-box .qnm-box-list li .txt-list{margin-top:20px}
+	.solar-qnm-box .qnm-box-list li .txt-list span{font-size:13px; padding-left:18px}
+}
+@media all and (max-width:640px){	
+	/* 유지보수 기본방향 */
+	.solar-qnm-box .qnm-box-list{display:block; flex-wrap:inherit;}
+	.solar-qnm-box .qnm-box-list li{width:100%; margin:0 0 10px}
+	/*주기적 검사시행 */
+	.solar-qnm-02 .solar-cm-tbl{margin-top:15px}
+	.solar-qnm-02 .solar-cm-tbl .solar-tbl tr th.blue-bg{padding:10px 0;}
+}
+
+
+/* ---------------- Green Energy :: Perovskite ---------------- */
+@media all and (max-width:800px){	
+	/* 무-유기 하이브리드 페로브스카이트 */
+	.perovskite-02 .box-img{padding:30px 15px}
+	/* 고효율 페로브스카이트 태양전지 */
+	.perovskite-img-con{margin-top:10px}
+	.perovskite-img-con ul li .txt{font-size:13px}
+	.perovskite-img-con ul li .txt .zoom-img{font-size:12px}
+}
+@media all and (max-width:640px){		
+	/* 고효율 페로브스카이트 태양전지 */
+	.perovskite-img-con ul li{float:none}
+	.perovskite-img-con ul.col-02,.perovskite-img-con ul.col-03{margin:0}
+	.perovskite-img-con ul.col-02 li,
+	.perovskite-img-con ul.col-03 li{width:100%; margin:0 auto 15px; max-width:590px}
+	.perovskite-img-con ul li img{max-width:none; width:100%}
+}
+
+/* ---------------- Green Energy :: 제품소개 ---------------- */
+@media all and (max-width:1024px){		
+	/* 주요특징 */
+	.prd-main-character-wrap{padding-bottom:60px}
+	.prd-main-character{padding-top:30px}
+	.prd-main-character .center-img img.pc{display:none}
+	.prd-main-character .center-img img.mb{display:inline-block; max-width:80%}
+	.prd-main-character .character-list{display:flex; flex-wrap:wrap; margin:-5% -1% 0}
+	.prd-main-character .character-con{position:relative; top:auto; left:auto; transform:translate(0,0); margin:0 1% 30px !important; width:23%; max-width:none}
+	.prd-main-character .character-con .txt br{display:none}
+}
+@media all and (max-width:800px){	
+	.product-intro-con{margin-top:30px}
+	.prd-intro-sec{margin-bottom:50px}
+	.prd-intro-sec .prd-intro-tit{font-size:16px; margin-bottom:15px}
+	/* 제품사양 */
+	.prd-table-con .prd-info-tbl tr td{font-size:13px; padding:10px 5px}
+	/* 주요특징 */
+	.prd-main-character-wrap{padding-bottom:30px}
+	.prd-main-character .character-con{width:48%; margin-bottom:20px}
+	.prd-main-character .character-con .icon{height:85px}
+	.prd-main-character .character-con .tit{font-size:14px; margin-top:10px}
+	.prd-main-character .character-con .txt{font-size:13px; margin-top:10px}
+	.prd-main-character .character-con .txt .certifi{font-size:12px;}
+	.prd-img-list li .prd-tit{margin-top:15px}
+	.prd-img-list li .prd-tit span{font-size:14px;}
+	.prd-img-list li .prd-tit .name{padding-right:15px}
+	.prd-img-list li .prd-tit .position{padding-left:10px}
+}
+@media all and (max-width:480px){		
+	/* 주요특징 */
+	.prd-img-list{margin:0 0 -25px}
+	.prd-img-list li{float:none; width:100%; margin:0 0 25px;}
+}
+
+
+/* ******************  IR ********************** */
+@media all and (max-width:480px){		
+	.sub-tab-list-style ul.ir-02-tab li{width:33.333%}
+	.sub-tab-list-style ul.ir-02-tab li a{padding:0 0 10px}
+}
+/* ---------------- IR :: 상장현황 ---------------- */
+/* 일반정보&발행주식수 */
+@media all and (max-width:800px){		
+	.ir-double-con{margin:0}
+	.ir-double-con .double-sec{float:none; width:100%; margin:0 0 30px}
+	.ir-sm-tit{font-size:16px; margin-bottom:10px}
+	.stock-cm-tbl tr th,.stock-cm-tbl tr td{font-size:13px; padding:10px}
+	.stock-cm-tbl tr th{padding-left:15px}
+	.stock-cm-tbl.txt-center thead tr th{padding:10px 0}
+}
+/* ---------------- IR :: 기업지배구조 ---------------- */
+@media all and (max-width:800px){		
+	/* 주주구성 */
+	.ir-sub-tit{font-size:19px; margin-bottom:20px}
+	.structure-graph .graph-img{padding:25px}
+	.structure-graph .graph-date{font-size:13px; margin-top:10px}
+	#donutchart text{font-size:13px !important}
+	/* 이사회 및 주요임원 */
+	.ir-sec{margin-bottom:25px}
+}
+@media all and (max-width:480px){		
+	#donutchart text{display:none}
+	#donutchart rect + g text{display:block}
+}
+
+/* ---------------- IR :: 재무정보 ---------------- */
+/* 배당현황 */
+@media all and ( max-width: 800px ){	
+	.stock-tit.ir-sub-tit .unit{font-size:12px; margin-top:5px}
+	.stockTbl th{font-size:14px;}
+	.stockTbl td{font-size:12px; }
+	.ir-notice-txt span{font-size:13px}
+}
+
+/* ---------------- IR :: News&Notice ---------------- */
+@media all and ( max-width: 800px ){	
+	.ir-news-con li{width:48%; margin-bottom:40px}
+	.ir-news-con li .new-txt-con .news-tit{font-size:20px; margin-top:20px}
+	.ir-news-con li .new-txt-con .news-txt{font-size:13px; margin-top:10px}
+	.ir-news-con li .news-date{margin-top:20px}
+	.article-view{font-size:11px; padding:8px 7px 6px; top:auto; right:auto; position:relative; display:inline-block; margin-top:15px}
+	.article-view i{font-size:15px}
+}
+
+
+/* ****************** Recruit ********************** */
+/* ---------------- Recruit :: 인사제도 ---------------- */
+/* 인재상 */
+@media all and ( max-width: 1024px ){	
+	.talent-box-list li .box-inner{padding:0 5%}
+	.talent-box-list li .txt-01{width:260px}
+	.talent-box-list li .txt-02{width:calc(100% - 362px); padding:15px 3%}
+}
+@media all and ( max-width: 800px ){	
+	.talent-box-list li .box-inner{position:relative; padding:25px; display:block; height:auto}
+	.talent-box-list li .box-inner > div{display:block;}
+	.talent-box-list li .txt-01{width:auto; padding-right:70px}
+	.talent-box-list li .txt-01 .num{font-size:45px; width:50px}
+	.talent-box-list li .txt-01 .tit{font-size:17px; padding-left:15px; width:calc(100% - 50px)}
+	.talent-box-list li .txt-01 .tit em{font-size:12px;}
+	.talent-box-list li .txt-02{padding:18px 0 0; width:100%}
+	.talent-box-list li .txt-02 p{font-size:12px}
+	.talent-box-list li .icon{width:60px; position:absolute; top:17px; right:20px}
+}
+
+/* 복리후생 */
+@media all and ( max-width: 960px ){	
+	.welfare-list li .inner{text-align:center; padding:35px 5%}
+	.welfare-list li .inner > div{display:block; margin:0}
+	.welfare-list li .inner .icon{display:inline-block}
+	.welfare-list li .inner .tit{width:100%; padding:15px 0}
+	.welfare-list li .inner .txt{width:100%;}
+}
+@media all and ( max-width: 800px ){	
+	.welfare-list-tit{font-size:15px; margin-bottom:10px}
+	.welfare-list li .inner{padding:25px 5% 18px}
+	.welfare-list li .inner .tit{padding:14px 0 8px}
+	.welfare-list li .inner .tit br{display:none}
+	.welfare-list li .inner .tit strong{font-size:13px}
+	.welfare-list li .inner .txt p{font-size:12px}
+}
+@media all and ( max-width: 480px ){	
+	.welfare-list li .inner .icon img{height:35px}
+}
+
+
+/* ---------------- Recruit :: 직무소개 ---------------- */
+@media all and ( max-width: 1024px ){	
+	/* 왼쪽메뉴바 */
+
+	/* 오른쪽 내용 */
+	.position-sec .position-detail-con > div{display:block; width:100%; padding:40px 0}
+
+}
+@media all and ( max-width: 800px ){	
+	/* 왼쪽메뉴바 */
+	.position-memu-bar{float:none; width:100%}
+	.position-memu-bar .side-menu-tit{height:45px}
+	.position-memu-bar .side-menu-tit h3{font-size:13px; padding:0 35px 0 15px}
+	.position-memu-bar .position-sub-menu{padding:0 10px}
+	.position-memu-bar .position-sub-menu > li a{font-size:13px; padding:10px 0}
+	/* 오른쪽 내용 */
+	.position-rt-con{float:none; width:100%; padding:30px 0 0}
+	.position-tit{font-size:19px; }
+	.position-sec{margin-top:20px}
+	.position-sec .position-sec-tit{font-size:16px; margin-bottom:10px}
+	.position-sec .position-detail-con > div{padding:25px 0}
+	.position-sec .position-detail-con > div .inner{padding:0 8%}
+	.position-sec .position-detail-con > div .inner .icon-tit .icon img{height:40px}
+	.position-sec .position-detail-con > div .inner .icon-tit .tit{font-size:15px;}
+	.position-sec .position-detail-con > div .inner .txt-list{padding-left:5%}
+	.position-sec .position-detail-con > div .inner .txt-list p{font-size:13px;}
+
+}
+
+
+/* ---------------- Recruit :: 채용공고 ---------------- */
+/* 채용절차 */
+@media all and (max-width:1024px){  
+	/* 채용절차 :: STEP 상세설명 */
+    .recruit-step-detail .inner .right-con .tit{margin-bottom: 10px; width: 100%; display: block; padding-right:0}
+    .recruit-step-detail .inner .right-con .txt{width: 100%; display: block;}
+}
+@media all and (max-width:800px){
+    /* 채용절차 :: STEP 박스 */
+	.recruit-sec:first-child{margin-bottom:50px}
+	.recruit-sec-tit{font-size:16px; margin-bottom:10px}
+    .recruit-step-list li{width: 100%; height: 120px; border-left: none; border-top: 1px solid #ddd; box-sizing: border-box;}
+    .recruit-step-list li:first-child{border-top: none;}
+    .recruit-step-list li:before{top: auto; bottom: -10px; margin-top: 0; left: 50%; margin-left: -10px; width: 20px; height: 20px; transform: rotate(90deg); z-index: 1;}
+    .recruit-step-list li:first-child:before{display: block;}
+    .recruit-step-list li:last-child:before{display: none;}
+	.recruit-step-list li .inner{padding:25px 10px}
+	.recruit-step-list li .inner .step-img img{height:40px}
+	.recruit-step-list li .inner .step-num{font-size:14px; margin-bottom:10px}
+	.recruit-step-list li .inner .step-tit{font-size:13px;}
+    /* 채용절차 :: STEP 상세설명 */
+	.recruit-step-detail{margin-top:20px}
+	.recruit-step-detail .inner{padding:15px 0}
+	.recruit-step-detail .inner .left-con{width:90px}
+	.recruit-step-detail .inner .left-con .txt{font-size:14px;}
+	.recruit-step-detail .inner .right-con{width:calc(100% - 90px); padding-left:35px}
+	.recruit-step-detail .inner .right-con:before{width:18px; height:19px}
+	.recruit-step-detail .inner .right-con .tit, .recruit-step-detail .inner .right-con .txt{font-size:13px}
+	.recruit-step-detail .inner .right-con .tit{margin-bottom:5px}
+	/* 채용절차 :: 근무조건,접수방법 */
+	.recruit-info-con{margin:0 }
+	.recruit-info-con .recruit-info{float:none; width:100%; margin:0 0 40px}
+	.recruit-info-con .recruit-info .info-txt-wrap{padding-top:15px}
+	.recruit-info-con .recruit-info .info-txt{font-size:13px}
+	.recruit-info-con .recruit-info .info-txt dt{width:65px}
+	.recruit-info-con .recruit-info .info-txt dd{width:calc(100% - 65px)}
+	/* 채용절차 :: 참고 및 유의사항 */
+	.recruit-notice-con{margin-bottom:40px}
+	.recruit-notice-con .notice-txt{font-size:13px; padding-top:15px}
+	/* 채용절차 :: 이메일, 지원하기버튼 */
+	.recruit-bottom .email{padding:15px 0}
+	.recruit-bottom .email span{font-size:14px; padding:0 15px}
+	.recruit-bottom .email span.txt01:after{height:13px}
+	.recruit-bottom .apply-btn{font-size:15px; margin-top:25px; width:190px; height:40px; line-height:40px}
+}
+
+/* 채용공고 */
+@media all and (max-width:800px){	
+	.recruit-board-wrap{padding-bottom:15px}
+	.recruit-board-con .recruit-board-tit{font-size:17px}
+	.recruit-board-banner{height:180px}
+	.recruit-board-banner .banner-inner{padding:0 5%}
+	.recruit-board-banner .banner-inner .tit{font-size:27px}
+	.recruit-board-banner .banner-inner .detail-btn{font-size:12px; margin-top:15px}
+
+	.talent-content .bbs-view-con{margin:30px 0}
+}
+
+
+/* 미디어센터 뷰페이지 */
+@media all and (max-width:1420px){		
+	.video-content .video-list{padding:0 30px}
+}
+@media all and (max-width:1024px){		
+	.video-content .bbs-gallery-list-con,
+	.video-content .bbs-view-con{padding:0 15px}
+}
