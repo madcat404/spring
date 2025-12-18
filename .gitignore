@@ -25,3 +25,6 @@ target/
 .vscode/
 *.class
 .svn/
+main/
+*.p12
+*.mp4
